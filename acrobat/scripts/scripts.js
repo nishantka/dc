@@ -275,13 +275,13 @@ const { ietf } = getLocale(locales);
   // Fast track the widget
   const widgetBlock = document.querySelector('[class*="dc-converter-widget"]');
 
-  if (!widgetBlock) {
+  if (widgetBlock) {
     document.body.classList.add('dc-bc');
     document.querySelector('header').classList.add('has-breadcrumbs');
     const verb = widgetBlock.children[0].children[0]?.innerText?.trim();
     const blockName = widgetBlock.classList.value;
-    widgetBlock.removeAttribute('class');
     widgetBlock.id = 'dc-converter-widget';
+    widgetBlock.classList.remove('dc-converter-widget');
     const DC_GENERATE_CACHE_VERSION = document.querySelector('meta[name="dc-generate-cache-version"]')?.getAttribute('content');
     const dcUrls = [
       `https://www.adobe.com/dc/dc-generate-cache/dc-hosted-${DC_GENERATE_CACHE_VERSION}/${verb}-${ietf.toLowerCase()}.html`,
