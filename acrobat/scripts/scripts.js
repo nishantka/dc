@@ -275,7 +275,7 @@ const { ietf } = getLocale(locales);
   // Fast track the widget
   const widgetBlock = document.querySelector('[class*="dc-converter-widget"]');
 
-  if (widgetBlock) {
+  if (!widgetBlock) {
     document.body.classList.add('dc-bc');
     document.querySelector('header').classList.add('has-breadcrumbs');
     const verb = widgetBlock.children[0].children[0]?.innerText?.trim();
