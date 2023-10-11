@@ -8,7 +8,7 @@
  */
 body {
   background-color: green;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 }
