@@ -281,7 +281,7 @@ const { ietf } = getLocale(locales);
     const verb = widgetBlock.children[0].children[0]?.innerText?.trim();
     const blockName = widgetBlock.classList.value;
     widgetBlock.id = 'dc-converter-widget';
-    widgetBlock.classList.remove('dc-converter-widget');
+    widgetBlock.removeAttribute('class');
     const DC_GENERATE_CACHE_VERSION = document.querySelector('meta[name="dc-generate-cache-version"]')?.getAttribute('content');
     const dcUrls = [
       `https://www.adobe.com/dc/dc-generate-cache/dc-hosted-${DC_GENERATE_CACHE_VERSION}/${verb}-${ietf.toLowerCase()}.html`,
