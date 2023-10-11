@@ -279,7 +279,7 @@ const { ietf } = getLocale(locales);
     document.body.classList.add('dc-bc');
     document.querySelector('header').classList.add('has-breadcrumbs');
     const verb = widgetBlock.children[0].children[0]?.innerText?.trim();
-    const blockName = widgetBlock.classList.value;
+    const blockName = 'dc-converter-widget';
     widgetBlock.id = 'dc-converter-widget';
     widgetBlock.removeAttribute('class');
     const DC_GENERATE_CACHE_VERSION = document.querySelector('meta[name="dc-generate-cache-version"]')?.getAttribute('content');
